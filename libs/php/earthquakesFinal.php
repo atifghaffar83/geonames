@@ -4,8 +4,8 @@
 
 	
 	//$url='http://api.geonames.org/earthquakesJSON?formatted=true&north=44.1&south=-9.98&east=22.4&west=55.2&username=geonamesag&style=full';	
-	$url='http://api.geonames.org/earthquakesJSON?formatted=true&north=55.0583836008072&south=47.2701236047002&east=15.0418156516163&west=5.8663152683722&username=geonamesag&style=full';
-	//$url='http://api.geonames.org/earthquakesJSON?formatted=true&north=' . $_REQUEST['north'] . '&south='. $_REQUEST['south'] .'&east='. $_REQUEST['east'] .'&west='. $_REQUEST['west'] .'&username=geonamesag&style=full';
+	//$url='http://api.geonames.org/earthquakesJSON?formatted=true&north=55.0583836008072&south=47.2701236047002&east=15.0418156516163&west=5.8663152683722&username=geonamesag&style=full';
+	$url='http://api.geonames.org/earthquakesJSON?formatted=true&north=' . $_REQUEST['north'] . '&south='. $_REQUEST['south'] .'&east='. $_REQUEST['east'] .'&west='. $_REQUEST['west'] .'&username=geonamesag&style=full';
 	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

@@ -109,7 +109,6 @@ const countryAjax = ()=>{
         
         $.ajax({
             url: "libs/php/getwikiInfo.php",
-            
             type: 'POST',
             dataType: 'json',
             data: {
@@ -123,30 +122,25 @@ const countryAjax = ()=>{
                     for(let row in onlyData){
                         $("#wikiNewResults").html(`<tr><td>${onlyData[row]['title']}</td><td>${onlyData[row]['lat']}</td><td>${onlyData[row]['lng']}</td><td>${onlyData[row]['summary']}</td><td><img src=${onlyData[row]['thumbnailImg']}></td></tr>`)
                         
-                        
                     }
                 }
-            
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 // your error code
             }
         }); 
-    
-
     }
-
 
     const earthQuakes = () =>  {
         //console.log($('#selCountrys [value="' + value + '"]').data("north"));
+        $("#earthQuakeNewResults").html("");
         $("#earthQuakesResults").removeClass();
         $("#geonameFullResults").addClass("geonameFullResults");
         $("#wikiResults").addClass("wikiResults");
         $("#geonameSingleResults").addClass("geonameSingleResults");
         
         $.ajax({
-            url: "libs/php/earthquakes.php",
-            
+            url: "libs/php/earthquakesFinal.php",
             type: 'POST',
             dataType: 'json',
             data: {

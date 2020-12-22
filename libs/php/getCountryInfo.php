@@ -3,7 +3,7 @@
 	$executionStartTime = microtime(true) / 1000;
 
 	$url='http://api.geonames.org/countryInfoJSON?formatted=true&lang=' . $_REQUEST['lang'] . '&country=' . $_REQUEST['country'] . '&username=geonamesag&style=full';
-
+	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -22,7 +22,8 @@
 	$output['data'] = $decode['geonames'];
 	
 	header('Content-Type: application/json; charset=UTF-8');
-
+	
+	
 	echo json_encode($output); 
 
 ?>
