@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Geonames Apis</title>
+		<meta name="description" content="Geonames Apis">
+		<meta name="keywords" content="Geonames Apis, Earthquakes, Country Information, Wikipedia Topics">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="atifG">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="libs/css/style.css"> -->
+		<link rel="stylesheet" href="libs/css/style.min.css">
+
+	</head>
+
+	<body>
+		<section id="preloader"></section>
+
+<main>
+	<section id="inputSection">
+		<div class="jumbotron mw-100 mh-100 text-light bg-success">
+			<h1 class="display-6">Geonames API's</h1>
+			<hr class="my-2">
+			<p class="lead">
+					<label for="selCountry"> Choose country:</label>
+					<input id="selCountry" type="text" list="selCountrys" class="form-control">
+					  <datalist id="selCountrys">
+					  </datalist>
+						<label for="selLanguage"> Choose Language:</label>
+						<select id="selLanguage" class="form-control">
+							<option value="en">English</option>
+							<option value="fr">Francais</option>
+							<option value="de">Deutsche</option>
+							<option value="ur">Urdu</option>
+						</select>
+					<button id="singleCountry" class="btn btn-primary btn-lg btn-block">Run</button>
+			</p>
+		  </div>
+	</section>
+
+		<div id="apiHead">
+			<table id="geonameResults">
+				<tr>
+					<th>API NAME</th>
+					<th>API DESCRIPTION</th>
+					<th>EXAMPLES</th>
+					
+				</tr>
+				
+					<tr>
+						<th>1. countryInfo</th>
+						<td>This Api shows important data about all countries like capital, continent, languages, population and area in squre kilo-meters.</td>
+						<td><input id="allCountries" type="button" value="All Countries" class="btn btn-success btn-lg btn-block"></td>
+					</tr>
+					<tr>
+						<th>2. wikipediaSearch</th>
+						<td>You can select a single country in the above input field to read about wikipedia article results about the country</td>
+						<td><input id="wikiInfo" type="button" value="Wikipedia Search" class="btn btn-success btn-lg btn-block"></td>
+					</tr>
+					<tr>
+						<th>3. earthquakes</th>
+						<td>This Api will show earthquakes information about the above selected country.</td>
+						<td><input id="earthQuakeInfo" type="button" value="Earthquakes" class="btn btn-success btn-lg btn-block"></td>
+					</tr>
+					
+				
+			</table>
+			
+				<table id="geonameFullResults" class="geonameFullResults">
+					<tr>
+						<th>Country</th>
+						<th>Capital</th>
+						<th>Continent</th>
+						<th>Languages</th>
+						<th>Population</th>
+						<th>Area (km2)</th>
+					</tr>
+					<tbody id="newResults">
+	
+					</tbody>
+				
+				
+				</table>
+	
+				<table id="geonameSingleResults" class="geonameSingleResults">
+					<tr>
+						<th>Country</th>
+						<th>Capital</th>
+						<th>Continent</th>
+						<th>Languages</th>
+						<th>Population</th>
+						<th>Area (km2)</th>
+					</tr>
+					<tbody id="countryResults">
+	
+					</tbody>
+				
+				
+				</table>
+	
+				<table id="wikiResults" class="wikiResults">
+					<tr>
+						<th>Title</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Summary</th>
+						<th>Image</th>
+						
+					</tr>
+					<tbody id="wikiNewResults">
+	
+					</tbody>
+				
+				
+				</table>
+	
+	
+				<table id="earthQuakesResults" class="earthQuakesResults">
+					<tr>
+						<th>Date/Time</th>
+						<th>Depth</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
+						<th>Source</th>
+						<th>Eqid</th>
+						<th>Magnitude</th>
+						
+					</tr>
+					<tbody id="earthQuakeNewResults">
+	
+					</tbody>
+				
+				
+				</table>
+			
+			
+
+		</div>
+
+</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- <script src="libs/js/script.js"></script> -->
+		<script src="libs/js/script.min.js"></script>
+</body>
+
+</html>

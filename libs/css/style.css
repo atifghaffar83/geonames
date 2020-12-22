@@ -1,0 +1,135 @@
+body{
+    margin: 16px;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+#inputSection{
+    
+    width: 75%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: space-between;
+    
+}
+
+.jumbotron{
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+
+}
+
+.btn-block{
+    width: 10%;
+    margin: none;
+    display: inline;
+}
+
+.form-control {
+    display: inline-block;
+    width: 30%;
+    padding: .375rem .75rem;
+}
+.geonameFullResults, .wikiResults, .earthQuakesResults, .geonameSingleResults{
+    display: none;
+}
+
+#geonameResults, #geonameFullResults, #wikiResults, #earthQuakesResults, #geonameSingleResults {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin: 8px auto;
+    
+  }
+
+  #geonameResults td, #geonameResults th, #geonameFullResults td, #geonameFullResults th, #wikiResults td, #wikiResults th, 
+  #earthQuakesResults td, #earthQuakesResults th, #geonameSingleResults td, #geonameSingleResults th {
+    border: 1px solid #ddd;
+    padding: 6px;
+    
+  }
+
+  td, th{
+     vertical-align: middle; 
+     font-size: 12px;
+  }
+  
+  .btn, .btn-lg, .btn-block{
+      width: 10%;
+      padding: 6px;
+      font-size: 1rem;
+  }
+
+  #geonameResults tr:nth-child(even), #geonameFullResults tr:nth-child(even), #wikiResults tr:nth-child(even), #earthQuakesResults tr:nth-child(even), #geonameSingleResults tr:nth-child(even){
+      background-color: #f2f2f2;
+  }
+  
+  #geonameResults tr:hover, #geonameFullResults tr:hover, #wikiResults tr:hover, #earthQuakesResults tr:hover, #geonameSingleResults tr:hover {background-color: #ddd;}
+  
+  #geonameResults th, #geonameFullResults th, #wikiResults th, #earthQuakesResults th, #geonameSingleResults th {
+    
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  @media (min-width: 576px){
+    .jumbotron {
+        padding: 0.5rem;
+    }
+  }
+
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+    }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #56829e ;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+    }
+    
+    @-webkit-keyframes animate-preloader {
+    section {
+      padding: 2rem 25%;
+      }
+  }
+  
+  @-webkit-keyframes animate-preloader {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      }
+      
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      }
+    }
+  @keyframes animate-preloader {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    }
+  }
