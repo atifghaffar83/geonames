@@ -2,10 +2,6 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-	//url for list of  all countries
-	//$url='http://api.geonames.org/countryInfoJSON?formatted=true&username=geonamesag&style=full';
-
-	//url for geoname api
 	$url='http://api.geonames.org/countryInfoJSON?formatted=true&lang=' . $_REQUEST['lang'] . '&country=' . $_REQUEST['country'] . '&username=geonamesag&style=full';
 
 	$ch = curl_init();
